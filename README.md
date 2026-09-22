@@ -1,9 +1,9 @@
 # Radiko
 
-Radiko ("root", in Esperanto) is a supply chain for Monero, Cuprate, and Serai
-binaries. It intends to be bootstrapped from source as much as possible,
-omitting binary blobs, enabling its inspection and certainty over how a binary
-was built.
+Radiko ("root", in Esperanto) is a supply chain for reproducible Monero,
+Cuprate, and Serai binaries. It intends to be bootstrapped from source as much
+as possible, omitting binary blobs, enabling its inspection and certainty over
+how a binary was built.
 
 ### Architecture
 
