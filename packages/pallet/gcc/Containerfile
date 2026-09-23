@@ -1,8 +1,5 @@
 FROM scratch
 COPY --from=stagex/core-musl . /
-COPY --from=stagex/core-musl-fts . /
-COPY --from=stagex/core-musl-obstack . /
-COPY --from=stagex/core-argp-standalone . /
 COPY --from=stagex/core-gcc . /
 COPY --from=stagex/core-mpfr . /
 COPY --from=stagex/core-mpc . /
