@@ -89,7 +89,7 @@ mirrors = ["https://mirrors.kernel.org/pub/linux/utils/kbd/{file}"]
 hash = "c40385e142989c91989413f3c5a31282b2ffdca16b69cd3ecfde537b8a474921"
 file = "flex-2.5.33.tar.gz"
 mirrors = [
-  "http://ftp-tel.sjtu.edu.cn/sites/ftp.openpkg.org/sources/DST/flex/{file}",
+  "https://snapshot.debian.org/archive/debian/20070101T000000Z/pool/main/f/flex/flex_2.5.33.orig.tar.gz",
 ]
 
 [sources.texinfo_67]
@@ -768,6 +768,7 @@ file = "flex-2.5.11.tar.gz"
 mirrors = [
   "http://ftp-tel.sjtu.edu.cn/sites/ftp.openpkg.org/sources/DST/flex/{file}",
   "https://ostm.panekj.dev/f/flex/flex-2.5.11.tar.gz",
+  "https://web.archive.org/web/20260923083543if_/https://ostm.panekj.dev/f/flex/flex-2.5.11.tar.gz",
 ]
 
 [sources.patch_276]
@@ -901,7 +902,10 @@ mirrors = [
 [sources.libunistring_0910]
 hash = "eb8fb2c3e4b6e2d336608377050892b54c3c983b646c561836550863003c05d7"
 file = "libunistring-0.9.10.tar.xz"
-mirrors = ["https://ftpmirror.gnu.org/gnu/libunistring/{file}"]
+mirrors = [
+  "https://ftpmirror.gnu.org/gnu/libunistring/{file}",
+  "https://mirrors.kernel.org/gnu/libunistring/{file}",
+]
 
 [sources.gnulib_52a06cb3]
 hash = "009989b81c0bebc5f6550636ed653fbcb237dafc2af5c706f3522087ca571e4d"
