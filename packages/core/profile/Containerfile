@@ -9,7 +9,7 @@ COPY <<-'EOF' /etc/profile
 	export MAKEFLAGS="-j$(nproc)"
 	export CC=clang
 	export CXX=clang++
-	export LD=ld.mold
+	export LD=lld
 	export CPP=clang-cpp
 	export AS=llvm-as
 	export AR=llvm-ar

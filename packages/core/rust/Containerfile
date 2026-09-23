@@ -19,7 +19,6 @@ COPY --from=stagex/core-pkgconf . /
 COPY --from=stagex/core-python . /
 
 COPY --from=stagex/core-onetbb . /
-COPY --from=stagex/core-mold . /
 
 COPY --from=stagex/core-zlib . /
 COPY --from=stagex/core-libzstd . /
@@ -56,10 +55,9 @@ COPY <<-'EOF' /etc/profile
 	export OBJDUMP=${LLVM_BINDIR}/llvm-objdump
 	export SIZE=${LLVM_BINDIR}/llvm-size
 
-	export LD=mold
+	export LD=lld
 	export CC=clang
 	export CXX=clang++
-	export CCC_OVERRIDE_OPTIONS="${CCC_OVERRIDE_OPTIONS:-} +-fuse-ld=mold"
 
 	export LLVM_LIB=${LLVM_ROOT}/lib/${TARGET}
 	export LIBCC="$LLVM_LIB/libclang_rt.builtins.a"
@@ -391,7 +389,7 @@ COPY --chmod=0755 <<-'EOF' build
 	export RUSTFLAGS="${RUSTFLAGS:-}"
 
 	# Tune how `rustc` is built for a faster build process.
-	export RUSTFLAGS="-Clinker=clang -Clink-arg=-Wl,-fuse-ld=mold $RUSTFLAGS"
+	export RUSTFLAGS="-Clinker=clang $RUSTFLAGS"
 	# For intermediary compilers, which aren't part of the committed output, we're more aggressive.
 	if [ ! "$TARGET_VERSION" = "$VERSION" ]; then
 		# Disable generating/embedding LLVM bitcode within the objects as it won't be used

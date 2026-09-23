@@ -191,7 +191,6 @@ RUN --network=none <<-EOF
 	cmake_cache_set CMAKE_NM /usr/bin/llvm-nm
 	cmake_cache_set CMAKE_RANLIB /usr/bin/llvm-ranlib
 	cmake_cache_set LLVM_NATIVE_TOOL_DIR /usr/bin/
-	cmake_cache_set LLVM_USE_LINKER lld
 	cmake_cache_set LLVM_HEADERS_TABLEGEN /usr/bin/llvm-tblgen
 	cmake_cache_set CLANG_TABLEGEN /usr/bin/clang-tblgen
 	cmake_cache_set LLVM_TARGETS_TO_BUILD "$LLVM_TARGETS_TO_BUILD"
@@ -269,7 +268,6 @@ RUN --network=none <<-EOF
 		-DCMAKE_CXX_COMPILER_TARGET="${TARGET}" \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_TRY_COMPILE_TARGET_TYPE=STATIC_LIBRARY \
-		-DLLVM_USE_LINKER=lld \
 		$(cat ./cmake_args) \
 		-DLLVM_ENABLE_PER_TARGET_RUNTIME_DIR=OFF \
 		-DLLVM_ENABLE_RUNTIMES="llvm-libgcc" \
