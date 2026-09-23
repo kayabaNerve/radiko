@@ -1,12 +1,12 @@
 [package]
 name = "gzip"
-version = "1.14"
+version = "1.15"
 description = "GNU data compression program"
 license = "GPL-3.0-or-later"
 website = "https://www.gnu.org/software/gzip/"
 
 [sources.gzip]
-hash = "01a7b881bd220bfdf615f97b8718f80bdfd3f6add385b993dcf6efd14e8c0ac6"
+hash = "9aa0cc780dec156b8282844833b342ab7cb08c25d2cd9a1869cdd0df31deff48"
 format = "tar.xz"
 file = "gzip-{version}.{format}"
-mirrors = [ "https://ftpmirror.gnu.org/gnu/gzip/{file}", "https://mirrors.kernel.org/gnu/gzip/{file}"] 
+mirrors = [ "https://ftpmirror.gnu.org/gnu/gzip/{file}", "https://mirrors.kernel.org/gnu/gzip/{file}"]
